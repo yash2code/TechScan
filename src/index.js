@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Nav from './components/Nav'
+import Home from './Screens/Home'
 
 
-
-
-ReactDOM.render(<Nav/>,document.getElementById('root'))
+ReactDOM.render(<Home/>,document.getElementById('root'))

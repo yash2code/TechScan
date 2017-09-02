@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import axios from 'axios'
 import logo from '../images/logo.png'
 
 class Nav extends Component{
