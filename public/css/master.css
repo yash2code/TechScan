@@ -207,7 +207,7 @@ thead th {
 
 }
 
-.peopleCard {
+.langCard {
   overflow: hidden;
   width: 100%;
   padding: 15px;
@@ -215,7 +215,7 @@ thead th {
   margin: 0 auto;
 }
 
-.people-card-header {
+.lang-card-header {
   overflow: hidden;
 }
 

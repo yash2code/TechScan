@@ -3,8 +3,8 @@ import logo from '../images/logo.png'
 
 class Nav extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
   }
 
@@ -12,6 +12,7 @@ class Nav extends Component {
 
   render() {
     return (
+      <div>
       <div className="header-wrapper">
         <div className="container">
           <div className="header-data box">
@@ -47,6 +48,8 @@ class Nav extends Component {
             </article>
           </div>
         </div>
+      </div>
+      {this.props.children}
       </div>
 
 

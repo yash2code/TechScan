@@ -5,6 +5,8 @@ import PY from '../images/python-logo.png'
 import Java from '../images/Java.png'
 import PHP from '../images/php.png'
 import Ruby from '../images/ruby.png'
+import Language from './Language'
+const Link = require('react-router').Link;
 
 export default class TechList extends Component {
 
@@ -31,6 +33,7 @@ export default class TechList extends Component {
                                         hoverOffset={20}>
 
                                         <Card background='#fafafa'>
+                                            <Link to={'/technology/javascript'}>
                                             <article className='media'>
                                                 <div className="media-left">
                                                     <figure className="image is-64x64">
@@ -46,6 +49,7 @@ export default class TechList extends Component {
                                                     </div>
                                                 </div>
                                             </article>
+                                            </Link>
                                         </Card>
 
                                         <Card background='#fafafa'>
@@ -125,6 +129,9 @@ export default class TechList extends Component {
 
                                 </div>
                             </div>
+                            <div className='column is-one-third'>
+                    <Language />
+                </div>
                         </div>
                     </div>
                 </section>
