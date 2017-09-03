@@ -5,7 +5,7 @@
 
 ### Inspiration
 
-- Built for CAST Hiring Challenge on [HackerEarth]https://hackerearth.com 
+- Built for CAST Hiring Challenge on [HackerEarth](https://hackerearth.com)
 
 ### Getting Started
 
