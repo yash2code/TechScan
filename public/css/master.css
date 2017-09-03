@@ -35,47 +35,7 @@ html {
   padding-top: 20px;
 }
 
-/* Tab Navigation */
-.active {
-  background: #fff;
-  border-bottom: none;
-  border-top: 3px solid #d26911;
-  border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
-}
 
-.tabs-wrapper {
-  background: #fafafa;
-  border-bottom: 1px solid #e5e5e5;
-  position: relative;
-}
-
-.tabs ul {
-  border-bottom: none;
-}
-
-.tabs a {
-  border-bottom: none;
-  padding: 8px 15px 11px;
-}
-
-.app-wrapper {
-  overflow: hidden;
-}
-
-.box {
-  background: none;
-  box-shadow: none;
-}
-
-.box .level-item:not(:last-child) {
-  margin-right: 3em;
-}
-
-.box .level-item .icon {
-  margin-right: .3em;
-  padding-top: 2px;
-}
 
 .repo article {
   padding: 2em 1em;
@@ -180,19 +140,6 @@ thead th {
   font-weight: normal;
 }
 
-.organizations {
-  overflow: hidden;
-  clear: both;
-
-}
-
-.organizations p {
-  font-size: 20px;
-  font-weight: 600 !important;
-  margin-top: 1em;
-  margin-bottom: 0 !important;
-}
-
 .profile-wrapper {
   margin-top: 20px;
 }
@@ -219,48 +166,6 @@ thead th {
   overflow: hidden;
 }
 
-.people-card-header a p:first-child {
-  float: left;
-}
 
-.people-card-header a p:last-child {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 3px;
-  color: #767676;
-  float: right;
-}
 
-/* Footer */
-.footer-wrapper {
-  font-size: 12px;
-  color: #767676;
-  padding: 40px 0;
-  border-top: 1px solid #eee;
-}
 
-.footer-wrapper nav {
-  background: #fff;
-}
-
-.footer-wrapper a {
-  color: #4078c0;
-}
-
-.footer-wrapper .nav-center a {
-  color: #bbb;
-  font-size: 24px;
-
-}
-
-.footer-wrapper .nav-center a:hover {
-  color: #ccc;
-}
-
-.footer-wrapper .nav-center a .icon i {
-  font-size: 24px;
-}
-
-strong {
-  color:#33516f;
-}

@@ -1,39 +1,48 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 const Link = require('react-router').Link;
-const data = ['JavaScript', 'Python', 'Java', 'PHP','Ruby','C','C++','Go','HTML','C#']
+const data = ['JavaScript', 'Python', 'Java', 'PHP', 'Ruby', 'C', 'C++', 'Go', 'HTML', 'C#']
 
 export default class Language extends Component {
     constructor() {
         super();
         this.state = {
             data: data,
-            count:[]
+            count: []
         }
     }
 
     componentDidMount(){
         this.getCount()
     }
+   
 
     getLang() {
-        this.state.data.map(function (player) {
-            return <li key={player}>{player}</li>
+        this.state.data.map(function (data) {
+            return <li key={data}>{data}</li>
 
         })
     }
 
     getCount() {
-        this.state.data.map((lang,i)=>{
-        axios.get('https://api.github.com/search/repositories?q='+lang)
-            
-            .then((res)=><li key={i}>{res.data.total_count}</li>)
+        this.state.data.map((lang, i) => {
+            axios.get('https://api.github.com/search/repositories?q=' + lang)
+
+                .then((res) => this.setState({
+                    count: [...this.state.count, res.data.total_count]
+                  }))
+                .then(()=> console.log(this.state.count))
+
+                return 0;
+
+                
         })
     }
 
 
 
     render() {
+       
         return (
             <div>
                 <div>
@@ -52,7 +61,7 @@ export default class Language extends Component {
                                         <ul className="menu-list">
 
                                             {this.state.data.map(function (lang, i) {
-                                                return <div><li key={i}><Link to={'/technology/' + lang }>{lang}</Link></li><br/></div>;
+                                                return <div><li key={i}><Link to={'/technology/' + lang}>{lang}</Link></li><br /></div>;
                                             })}
                                         </ul>
                                     </aside>
@@ -63,12 +72,11 @@ export default class Language extends Component {
                                 <section className='section'>
                                     <aside className="menu">
                                         <ul className="menu-list">
-                                       { this.state.data.map((lang,i)=>{
-        axios.get('https://api.github.com/search/repositories?q='+lang)
-            
-            .then((res)=><li key={i}>{res.data.total_count}</li>)
-        })}
+                                            
 
+                                        {this.state.count.map(function (count, i) {
+                                                return <div><Link><li key={i}>{count}</li></Link><br /></div>;
+                                            })}
                                         </ul>
                                     </aside>
                                 </section>
